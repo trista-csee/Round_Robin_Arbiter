@@ -15,34 +15,35 @@
 * The masked arbiter takes priority over the unmasked one.
   If there is no masked request, the unmasked arbiter's result is used.
 * However, if there is a masked request, the masked arbiter's result takes precedence. The mask determines which request has priority.
-![image]()
+![image](https://github.com/trista-csee/Round_Robin_Arbiter/blob/main/Schmatic_all.png)
 
 * Enlarge the left half
-![image]()
+![image](https://github.com/trista-csee/Round_Robin_Arbiter/blob/main/Schmatic_left.png)
 
 * Enlarge the right half
-![image]()
+![image](https://github.com/trista-csee/Round_Robin_Arbiter/blob/main/Schmatic_right.png)
 
 <!-- Simulation -->
 ## Simulation
 * The maskedRequest ensures that only requests with priority (i.e., those with a set mask bit) are processed by the masked arbiter.
-![image]()
+![image](https://github.com/trista-csee/Round_Robin_Arbiter/blob/main/request%5B0%5D%3D1_Simulation.png)
 
 * The grant output checks whether the maskedRequest expression is 0.
   If it is, the unmasked arbiter's result is used.
-![image]()
+![image](https://github.com/trista-csee/Round_Robin_Arbiter/blob/main/request%5B0%5D%3D0_Simulation.png)
 * If it is not, the masked arbiter's result is used.
-![image]()
+![image](https://github.com/trista-csee/Round_Robin_Arbiter/blob/main/request%5B0%5D%26request%5B1%5D%3D1_Simulation.png)
 
 * The mask update ensures that requests are processed in a circular fashion, promoting statistical fairness and preventing starvation.
 * When the N-th bit is granted, the subsequent bits above N must have priority in the next cycle.
   That is, the MSB:N+1 bits are set to 1, while the remaining bits are set to 0.
   For example, if the grant vector is 00001000, the mask will be 11110000 in the next cycle. 
-![image]()
+![image](https://github.com/trista-csee/Round_Robin_Arbiter/blob/main/request%5B2%5D%3D1%26request%5B1%5D%3D0_Simulation.png)
+![image](https://github.com/trista-csee/Round_Robin_Arbiter/blob/main/request%5B3%5D%3D1%26request%5B2%5D%3D0_Simulation.png)
 
 * Requests in the MSB 4 bits are granted access, but if there are no requests in these bits, the unmasked arbiter's result is used.
   If no grant occurs during the cycle, the mask remains unchanged.
-![image]()
+![image](https://github.com/trista-csee/Round_Robin_Arbiter/blob/main/request%5B3%5D%3D0_Simulation.png)
 
 <!-- LICENSE -->
 ## License
@@ -57,7 +58,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 吳華楨 Trista Wu - trista.cs11@nycu.edu.tw
 
-Project Link: []()
+Project Link: [https://github.com/trista-csee/Round_Robin_Arbiter](https://github.com/trista-csee/Round_Robin_Arbiter)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
