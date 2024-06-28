@@ -7,8 +7,8 @@
 <!-- PROJECT Name --> 
 <h1 align="center">Design a round-robin arbiter to ensure that each request has an equal chance of being granted access to shared resources</h1>
 
-<!-- Schmatic -->
-## Schmatic
+<!-- Schematic -->
+## Schematic
 * In this design of the round-robin arbiter, two fixed priority arbiters are utilized to manage requests for a shared resource.
 * The first arbiter, the unmasked arbiter, processes the original request.
   The second arbiter, the masked arbiter, processes the request ANDed with a mask.
